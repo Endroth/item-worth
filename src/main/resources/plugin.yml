@@ -1,0 +1,17 @@
+name: ItemWorth
+version: 1.0
+main: com.servidor.worth.ItemWorth
+api-version: '1.21'
+depend: [ProtocolLib, SellPlugin]
+commands:
+  valoritem:
+    description: Liga/desliga a mostra de valor nos itens (só para você)
+    usage: /valoritem [reload]
+    aliases: [itemworth]
+permissions:
+  itemworth.see:
+    description: Ver o valor dos itens ao passar o mouse
+    default: true
+  itemworth.admin:
+    description: Recarregar o ItemWorth
+    default: op

@@ -1,0 +1,10 @@
+# Textos mostrados no tooltip do item. Cores com & (ex.: &a verde).
+# Placeholders: {price} = valor de 1 item, {amount} = quantidade, {total} = valor da pilha
+line-price: "&7Vale: &a{price} &7cada"
+line-stack: "&7Pilha (&f{amount}&7): &a{total}"
+line-unsellable: "&cNão pode ser vendido"
+
+# Mostrar a linha da pilha só quando tiver mais de 1 item
+show-stack-line: true
+# Mostrar "Não pode ser vendido" nos itens bloqueados
+show-unsellable: true
