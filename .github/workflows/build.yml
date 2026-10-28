@@ -1,0 +1,30 @@
+name: ItemWorth
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Instalar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Compilar
+        run: mvn -B clean package
+
+      - name: Guardar o .jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: SellPlugin
+          path: target/ItemWorth-1.0.jar
